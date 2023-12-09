@@ -17,7 +17,7 @@ public class BloodPressure {
 
     @Id
     private int id;
-    @JsonIgnore
+
 
     private LocalDate date;
     private LocalTime time;
@@ -27,4 +27,18 @@ public class BloodPressure {
     private double avg_SP;
     private double  avg_DP;
     private double avg_HB;
+    public BloodPressure() {
+    }
+
+
+    public BloodPressure(LocalDate date, LocalTime time, int systolicPressure, int diastolicPressure, int heartBeats, double avgSP, double avgDP, double avgHB) {
+        this.date = date;
+        this.time = time;
+        this.systolic_pressure = systolicPressure;
+        this.diastolic_pressure = diastolicPressure;
+        this.heart_beats = heartBeats;
+        this.avg_SP = avgSP;
+        this.avg_DP = avgDP;
+        this.avg_HB = avgHB;
+    }
 }
